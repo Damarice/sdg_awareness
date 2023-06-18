@@ -79,15 +79,11 @@ class _Sdg1DetailsPageState extends State<Sdg1DetailsPage>
                               showDialog(
                                 context: context,
                                 builder: (context) => AlertDialog(
-                                  title:
-                                      Text('1.1 - Eradicate extreme poverty'),
+                                  title: Text('1.1 - Eradicate extreme poverty'),
                                   content: LinearProgressIndicator(
-                                    value:
-                                        0.5, // replace with your actual progress
-                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                        Color(0xFFE5243B)),
-                                    backgroundColor:
-                                        Color(0xFFE5243B).withOpacity(0.3),
+                                    value: 0.5, // replace with your actual progress
+                                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFE5243B)),
+                                    backgroundColor: Color(0xFFE5243B).withOpacity(0.3),
                                   ),
                                   actions: [
                                     TextButton(
@@ -103,7 +99,67 @@ class _Sdg1DetailsPageState extends State<Sdg1DetailsPage>
                           ),
                         ),
                       ),
-                      // Repeat for other targets...
+                      Card(
+                        child: ListTile(
+                          leading: Icon(Icons.check),
+                          title: Text('1.2 - Reduce poverty rates'),
+                          trailing: IconButton(
+                            icon: Icon(Icons.info_outline),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('1.2 - Reduce poverty rates'),
+                                  content: LinearProgressIndicator(
+                                    value: 0.3, // replace with your actual progress
+                                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFE5243B)),
+                                    backgroundColor: Color(0xFFE5243B).withOpacity(0.3),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Close'),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: ListTile(
+                          leading: Icon(Icons.check),
+                          title: Text('1.3 - Implement social protection systems'),
+                          trailing: IconButton(
+                            icon: Icon(Icons.info_outline),
+                            onPressed: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('1.3 - Implement social protection systems'),
+                                  content: LinearProgressIndicator(
+                                    value: 0.8, // replace with your actual progress
+                                    valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFE5243B)),
+                                    backgroundColor: Color(0xFFE5243B).withOpacity(0.3),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: Text('Close'),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                      // Add more cards for other targets...
                       SizedBox(height: 24),
                       Center(
                         child: ElevatedButton(
@@ -113,7 +169,7 @@ class _Sdg1DetailsPageState extends State<Sdg1DetailsPage>
                           onPressed: () {
                             // Implement your functionality for starting a campaign here
                           },
-                          child: Text('Start a Campaign'),
+                          child: Text('Start a Forum'),
                         ),
                       ),
                       SizedBox(height: 24),
